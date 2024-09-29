@@ -10,9 +10,11 @@ public class User {
     private Integer id;
     @Size(min = 2,message = "name lenght sould me at least 2 charcter")
 
-    @JsonProperty
+    @JsonProperty("user_name")
     private String name;
     @Past(message = "Birthdate cannot be more than current date")
+
+    @JsonProperty("brith_date")
     private LocalDate birthDate;
 
     public User(Integer id, String name, LocalDate birthDate) {
