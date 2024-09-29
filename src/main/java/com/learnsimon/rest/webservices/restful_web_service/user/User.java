@@ -1,5 +1,6 @@
 package com.learnsimon.rest.webservices.restful_web_service.user;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
 
@@ -8,6 +9,8 @@ import java.time.LocalDate;
 public class User {
     private Integer id;
     @Size(min = 2,message = "name lenght sould me at least 2 charcter")
+
+    @JsonProperty
     private String name;
     @Past(message = "Birthdate cannot be more than current date")
     private LocalDate birthDate;
