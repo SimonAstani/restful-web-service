@@ -3,7 +3,6 @@ package com.learnsimon.rest.webservices.restful_web_service.user;
 import jakarta.validation.Valid;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
-import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -22,7 +21,7 @@ public class UserResource {
         this.service = service;
     }
 
-    @GetMapping("/users")
+    @GetMapping("/user")
     public List<User>  retriveAllUser(){
         return service.findAll();
     }
